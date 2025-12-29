@@ -1,10 +1,17 @@
 import './App.css';
-import HomePage from './components/homePage.tsx';
+import { BrowserRouter,Routes,Route } from "react-router"
+import HomePage from './components/HomePage.tsx';
+import LoginPage from './components/LoginPage.tsx';
 function App() {
   return (
     <div className="App">
       <header className="App-header">
-       <HomePage />
+        <BrowserRouter>
+        <Routes>
+          <Route path="/" element={<LoginPage />} />
+          <Route path="/diary" element={<HomePage />} />
+        </Routes>
+        </BrowserRouter>
       </header>
     </div>
   );

@@ -9,7 +9,7 @@ function formatDateIntl(date:Date) {
     year: 'numeric',
     hour: '2-digit',
     minute: '2-digit',
-    hour12: false // Use 24-hour format, set to true for AM/PM
+    hour12: false 
   }).format(date).replace(',', '');
 }
 const handleSubmit = (event: React.FormEvent)=>{
